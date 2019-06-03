@@ -24,6 +24,11 @@ public class ProductController {
     public List<Product> getAllProducts() {
         return productService.getAll();
     }
+
+    @PostMapping(value = "/product")
+    public Product createProduct(@RequestBody Product product) {
+        return productService.save(product);
+    }
 }
 
 
