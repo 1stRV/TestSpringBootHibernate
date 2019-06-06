@@ -29,6 +29,11 @@ public class ProductController {
     public Product createProduct(@RequestBody Product product) {
         return productService.save(product);
     }
+
+    @GetMapping(value = "/product/{name}")
+    public Product getProductByName(@PathVariable("name") String name) {
+        return productService.findByName(name);
+    }
 }
 
 

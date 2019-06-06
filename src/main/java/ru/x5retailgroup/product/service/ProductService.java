@@ -11,4 +11,6 @@ public interface ProductService {
     Product save(Product product);
 
     List<Product> getAll();
+
+    Product findByName(String name);
 }

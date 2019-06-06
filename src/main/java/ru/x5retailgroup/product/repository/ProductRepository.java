@@ -6,4 +6,5 @@ import ru.x5retailgroup.product.model.jpa.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
+    Product findByName(String name);
 }
